@@ -331,7 +331,7 @@ function loadImportContent(
     return
   }
 
-  var result = postcss(options.plugins).process(content, {from: filename,syntax: result.opts.syntax,parser: result.opts.parser,}).css
+  var result = postcss(options.plugins).process(content, {from: filename,syntax: result.opts.syntax,parser: result.opts.parser}).result
 
   var styles = result.root
   result.messages = result.messages.concat(result.messages)
